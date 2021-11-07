@@ -1,10 +1,10 @@
-name: 'ByteTerrace Azure Resources'
-on: [push]
+name: 'Crayceratops Azure Resources'
+on: [none]
 jobs:
   deploy:
     runs-on: 'ubuntu-latest'
     steps:
-      - name: 'checkout ByteTerrace Resources repository'
+      - name: 'checkout Crayceratops Resources repository'
         uses: 'actions/checkout@v2'
         with:
           clean: true
