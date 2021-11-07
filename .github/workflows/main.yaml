@@ -1,5 +1,5 @@
 name: 'Crayceratops Azure Resources'
-on: [none]
+on: [push]
 jobs:
   deploy:
     runs-on: 'ubuntu-latest'
