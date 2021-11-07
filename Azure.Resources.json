@@ -1,0 +1,67 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "diagnosticServicesTrustedStorageAccessObjectId": {
+            "value": "dbc2e23f-cd5b-4d87-b528-852e3ca02f5a"
+        },
+        "resourceDefinitions": {
+            "value": {
+                "dnsZones": {
+                    "public": [
+                        {
+                            "cnameRecords": [
+                                {
+                                    "alias": "autodiscover.outlook.com",
+                                    "name": "autodiscover",
+                                    "timeToLiveInSeconds": 3600
+                                },
+                                {
+                                    "alias": "enterpriseenrollment.manage.microsoft.com",
+                                    "name": "enterpriseenrollment",
+                                    "timeToLiveInSeconds": 3600
+                                },
+                                {
+                                    "alias": "enterpriseregistration.windows.net",
+                                    "name": "enterpriseregistration",
+                                    "timeToLiveInSeconds": 3600
+                                }
+                            ],
+                            "mxRecords": [
+                                {
+                                    "exchanges": [
+                                        {
+                                            "exchange": "crayceratops-com.mail.protection.outlook.com",
+                                            "preference": 0
+                                        }
+                                    ],
+                                    "name": "@",
+                                    "timeToLiveInSeconds": 3600
+                                }
+                            ],
+                            "name": "crayceratops.com",
+                            "txtRecords": [
+                                {
+                                    "name": "@",
+                                    "timeToLiveInSeconds": 3600,
+                                    "values": [
+                                        "v=spf1 include:spf.protection.outlook.com -all"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "crayceratops.info"
+                        },
+                        {
+                            "name": "crayceratops.tv"
+                        }
+                    ]
+                }
+            }
+        },
+        "tags": {
+            "value": {}
+        }
+    }
+}
